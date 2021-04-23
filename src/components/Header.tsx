@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View, Text, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
 import userImg from '../assets/maby.png'
@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 20,
-    marginTop: getStatusBarHeight(),
-    padding: 30
+    marginTop: getStatusBarHeight() + 10,
   },
   greeting: {
     fontSize: 32,
