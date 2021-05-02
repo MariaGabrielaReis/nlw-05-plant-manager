@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SafeAreaView, StyleSheet, Text, TextInput, View, KeyboardAvoidingView, TouchableWithoutFeedback, Platform, Keyboard } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TextInput, View, KeyboardAvoidingView, TouchableWithoutFeedback, Platform, Keyboard, Alert } from 'react-native'
 import { useNavigation } from "@react-navigation/core"
 
 import colors from '../styles/colors'
@@ -28,6 +28,9 @@ export function UserIdentification() {
   }
 
   function handleSubmit(){
+    if(!name)
+      return Alert.alert('Poxa, me diz como chamar você 😟')
+    
     navigation.navigate("Confirmation")
   }
 
