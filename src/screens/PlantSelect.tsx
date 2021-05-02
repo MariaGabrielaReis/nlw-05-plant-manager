@@ -61,8 +61,8 @@ export function PlantSelect() {
       return setLoading(true)
     
     if(page > 1){
-      setPlants(oldValue => [... oldValue, ... data])
-      setFilteredPlants(oldValue => [... oldValue, ... data])
+      setPlants(oldValue => [...oldValue, ...data])
+      setFilteredPlants(oldValue => [...oldValue, ...data])
     } else {
       setPlants(data)
       setFilteredPlants(data)
@@ -182,13 +182,12 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     paddingBottom: 5,
-    marginLeft: 32,
+    marginLeft: 10,
     marginVertical: 30
   },
   plants: {
     flex: 1,
     paddingHorizontal: 32,
     justifyContent: 'center'
-
   },
 })
