@@ -1,9 +1,8 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
 import { RectButton, RectButtonProps} from 'react-native-gesture-handler'
 import { SvgFromUri } from 'react-native-svg'
 
-import userImg from '../assets/maby.png'
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
@@ -11,13 +10,6 @@ interface PlantProps extends RectButtonProps {
   data: {
     name: string,
     photo: string
-  }
-}
-
-interface PlantProps extends RectButtonProps {
-  data: {
-    name: string;
-    photo: string;
   }
 }
 
