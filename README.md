@@ -37,7 +37,7 @@ As seguintes tecnologias e ferramentas estão sendo utilizadas neste projeto:
 Abaixo é possível encontrar uma demonstração das telas e funcionalidades do projeto, mas se quiser conferir o layout original das telas do projeto, acesse [este link](https://www.figma.com/file/IhQRtrOZdu3TrvkPYREzOy/PlantManager).
 
 <p align="center">
-  <img alt="Demontração" src=".github/demo-aula-02.gif" width="230px" />
+  <img alt="Demonstração" src=".github/demo-aula-03.gif" width="230px" />
 </p>
 
 </div>
@@ -55,9 +55,21 @@ $ cd nlw-05-plant-manager
 
 # Instale as dependências do projeto
 $ npm install
+# ou
+$ yarn add
 
 # Inicie o projeto
 $ expo start
+
+# Altere o IP no arquivo 'api.ts' (na pasta 'services') para o seu IP.
+# Para saber o IP do seu computador, rode no terminal:
+$ ipconfig
+
+# Copie o IPv4 e cole entre '//' e ':3000' da URL base e rode:
+$ json-server ./src/services/server.json --host <SEU IP AQUI TAMBÉM> --port 3000
+
+# O servidor estará ativo, verifique se seu celular e PC então na mesma rede
+# e, preferencialmente, com o Firewall do PC desligado.
 ```
 
 </div>
