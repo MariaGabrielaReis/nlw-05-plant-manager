@@ -33,10 +33,9 @@ export async function savePlant(plant: PlantProps): Promise<void> {
     if (repeat_every === "week") {
       const interval = Math.trunc(7 / times);
       nextTime.setDate(now.getDate() + interval);
+    } else {
+      nextTime.setDate(nextTime.getDate() + 1);
     }
-    // else {
-    //   nextTime.setDate(nextTime.getDate() + 1);
-    // }
 
     const seconds = Math.abs(
       Math.ceil((now.getTime() - nextTime.getTime()) / 1000)
@@ -98,7 +97,7 @@ export async function loadPlant(): Promise<PlantProps[]> {
       .sort((a, b) =>
         Math.floor(
           new Date(a.dateTimeNotification).getTime() / 1000 -
-            Math.floor(new Date(b.dateTimeNotification).getTime() / 100)
+            Math.floor(new Date(b.dateTimeNotification).getTime() / 1000)
         )
       );
 
