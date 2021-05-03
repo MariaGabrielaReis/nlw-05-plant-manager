@@ -8,6 +8,7 @@ import colors from '../styles/colors'
 import fonts from '../styles/fonts'
 
 import { Header } from '../components/Header'
+import { Load } from '../components/Load'
 import { loadPlant, PlantProps } from '../libs/storage'
 import { PlantCardSecondary } from '../components/PlantCardSecondary'
 
@@ -35,6 +36,10 @@ export function MyPlants(){
 
     loadStorageData()
   }, [])
+
+  
+  if (loading)
+    return <Load />
 
   return (
     <View style={styles.container}>
